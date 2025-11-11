@@ -32,34 +32,28 @@
         header {
             background: linear-gradient(135deg, #2c3e50, #34495e);
             color: white;
-            padding: 40px 30px;
+            padding: 30px;
             text-align: center;
             border-bottom: 5px solid #e74c3c;
         }
 
         .logo {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 15px;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
         }
 
-        .logo i {
-            font-size: 2.5rem;
-            color: #3498db;
+        .logo-image {
+            height: 120px;
+            width: auto;
+            max-width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
         }
 
-        .logo h1 {
-            font-size: 2.2rem;
-            font-weight: 300;
-        }
-
-        .department {
-            font-size: 1.3rem;
+        .instruction-text {
+            font-size: 1.2rem;
             color: #ecf0f1;
-            margin-top: 10px;
-            font-weight: 300;
+            margin-top: 15px;
+            line-height: 1.5;
         }
 
         /* Main Content */
@@ -295,16 +289,15 @@
             }
             
             header {
-                padding: 30px 20px;
+                padding: 20px;
             }
             
-            .logo {
-                flex-direction: column;
-                gap: 10px;
+            .logo-image {
+                height: 100px;
             }
             
-            .logo h1 {
-                font-size: 1.8rem;
+            .instruction-text {
+                font-size: 1.1rem;
             }
             
             .input-group {
@@ -337,11 +330,10 @@
     <div class="container">
         <header>
             <div class="logo">
-                <i class="fas fa-passport"></i>
-                <h1>Refugee Department Appointment System</h1>
+                <!-- Replace with your actual logo file name -->
+                <img src="Logo.png" alt="Office of the Prime Minister - Republic of Uganda" class="logo-image">
             </div>
-            <p>Enter your Registration Number to view your interview appointment details</p>
-            <div class="department">Department of Refugees - Kampala</div>
+            <p class="instruction-text">Enter your Registration Number to view your interview appointment details</p>
         </header>
 
         <main>
@@ -375,12 +367,12 @@
 
             <div class="info-section">
                 <div class="info-card">
-                    <i class="fas fa-info-circle"></i>
-                    <h3>Important Information</h3>
-                    <p>All interviews are conducted at the Department of Refugees headquarters. Please bring all required documents and arrive 30 minutes before your scheduled time.</p>
+                    <i class="fas fa-exclamation-triangle" style="color: #e74c3c;"></i>
+                    <h3>Official Advisory</h3>
+                    <p><strong>Free Services:</strong> All interviews and processing at the Department of Refugees - OPM are completely free of charge.</p>
+                    <p><strong>No Brokers Allowed:</strong> The use of brokers, middlemen, or intermediaries is strictly prohibited. Engaging such services may result in immediate disqualification of your application.</p>
+                    <p><strong>Preparation Required:</strong> Please bring all necessary documents and arrive 30 minutes before your scheduled appointment time.</p>
                     <div class="contact-info">
-                        <p><i class="fas fa-phone"></i> Support: +256-XXX-XXXXXX</p>
-                        <p><i class="fas fa-envelope"></i> Email: refugees-department@kampala.go.ug</p>
                         <p><i class="fas fa-clock"></i> Office Hours: 8:00 AM - 5:00 PM (Mon-Fri)</p>
                     </div>
                 </div>
@@ -388,9 +380,9 @@
         </main>
 
         <footer>
-            <p>Department of Refugees | Ministry of Internal Affairs</p>
+            <p>Department of Refugees | Office of The Prime Minister</p>
             <p class="location">Sir Apollo Kagwa Road, Old Kampala</p>
-            <p>&copy; 2024 Refugee Appointment System. All rights reserved.</p>
+            <p>&copy; 2025 Refugee Appointment System. All rights reserved.</p>
         </footer>
     </div>
 
@@ -475,16 +467,16 @@
                             </div>
                             <div class="detail-item">
                                 <span class="detail-label"><i class="fas fa-hourglass-half"></i> Duration:</span>
-                                <span class="detail-value">Approx. 2-3 hours</span>
+                                <span class="detail-value">Approx. 1-2 hours</span>
                             </div>
                         </div>
                         <div style="margin-top: 20px; padding: 15px; background: rgba(255,255,255,0.5); border-radius: 8px;">
                             <p><strong><i class="fas fa-info-circle"></i> Important Instructions:</strong></p>
                             <ul style="margin-top: 10px; padding-left: 20px;">
                                 <li>Arrive 30 minutes before your scheduled time for security screening</li>
-                                <li>Bring your original passport/ID and all supporting documents</li>
+                                <li>Bring your original Asylum Seeker Certificate/ID and all supporting documents</li>
                                 <li>Bring copies of all submitted application materials</li>
-                                <li>Dress appropriately for a formal government interview</li>
+                                <li>Dress appropriately and look decent</li>
                                 <li>No electronic devices allowed in the interview room</li>
                                 <li>Late arrivals may need to reschedule</li>
                             </ul>
@@ -496,7 +488,8 @@
                         <p>No interview appointment found for Registration Number: <strong>${regId}</strong></p>
                         <div style="margin-top: 15px;">
                             <p>Please check that you've entered your Registration Number correctly.</p>
-                            <p>If you believe this is an error or haven't received an appointment date, please contact our support team.</p>
+                            <p>This registration number is not currently scheduled for an interview appointment.</p>
+                            <p>If you believe this is an error or haven't received an appointment date, Visit Office for support.</p>
                         </div>
                     `, 'error');
                 }
